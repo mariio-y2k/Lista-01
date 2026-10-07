@@ -1,10 +1,12 @@
-turno = input("Digite o turno que você estuda (M-Matutino, V-Vespertino, N-Noturno): ")
+peso = float(input("Digite o peso dos peixes em kg: "))
 
-if turno == "M":
-    print("Bom Dia!")
-elif turno == "V":
-    print("Boa Tarde!")
-elif turno == "N":
-    print("Boa Noite!")
+if peso > 50:
+    excesso = peso - 50
+    multa = excesso * 4
 else:
-    print("Valor Inválido!")
+    excesso = 0
+    multa = 0
+
+print(f"Excesso de peso: {excesso:.2f} kg")
+print(f"Valor da multa: R$ {multa:.2f}")
+
